@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 #import versioneer
 
 
@@ -34,7 +34,6 @@ See the `pybroom homepage <http://pybroom.readthedocs.io/>`__ for more info.
 setup(
     name='pybroom',
     version=get_version(),
-    py_modules=['pybroom'],
     #version=versioneer.get_version(),
     #cmdclass=versioneer.get_cmdclass(),
     author='Antonino Ingargiola',
@@ -42,6 +41,7 @@ setup(
     url='http://pybroom.readthedocs.io/',
     download_url='https://github.com/tritemio/pybroom',
     install_requires=['pandas', 'lmfit'],
+    packages=find_packages(),
     include_package_data=True,
     license='MIT',
     description=("Make tidy DataFrames from messy fit/model results."),
