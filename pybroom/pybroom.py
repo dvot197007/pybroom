@@ -272,7 +272,8 @@ def _multi_dataframe(func, results, var_names, **kwargs):
     var_names = _as_list_of_strings_copy(var_names)
     var_name = var_names.pop(0)
     for i, (key, res) in enumerate(d.items()):
-        if isinstance(res, (list, dict)):
+        # Some result classes subclass dict, so isinstance fails
+        if type(res) in {list, dict}:
             d[key] = func(res, var_names, **kwargs)
         else:
             d[key] = func(res, **kwargs)

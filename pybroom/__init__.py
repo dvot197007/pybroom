@@ -19,6 +19,7 @@ def build_registries():
     from contextlib import suppress
     from glob import glob
     PATH = os.path.dirname(__file__)
+    exclude = {'tests'}
 
     def subpackages():
         """
@@ -33,7 +34,7 @@ def build_registries():
                     glob(os.path.join(d, '__init__.py*')))
 
         for d in os.listdir(PATH):
-            if is_package(d):
+            if is_package(d) and d not in exclude:
                 yield d
 
     def modules(package_string):
