@@ -1,6 +1,15 @@
 Pybroom's Release Notes
 =======================
 
+Version 0.3
+-----------
+
+API Changes
+***********
+
+- The ``param_names`` parameter of the `tidy` function for the
+  `scipy.optimize` fit results was made optional.
+
 Version 0.2
 -----------
 

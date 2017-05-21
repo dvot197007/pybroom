@@ -7,7 +7,7 @@ from ..utils import dict_to_tidy
 
 
 @tidy.register(so.OptimizeResult)
-def tidy_optimize(result, param_names, **kwargs):
+def tidy_optimize(result, param_names=None, **kwargs):
     """Tidy parameters data from scipy's `OptimizeResult`.
 
     Normally this function is not called directly but invoked by the
@@ -17,9 +17,10 @@ def tidy_optimize(result, param_names, **kwargs):
 
     Arguments:
         result (`OptimizeResult`): the fit result object.
-        param_names (string or list of string): names of the fitted parameters.
-            It can either be a list of strings or a single string with
-            space-separated names.
+        param_names (string or list of string, optional): names of the
+            fitted parameters. It can either be a list of strings or a
+            single string with space-separated names. If ``None``, the
+            parameters are named *p0, p1, p2, ..., pn*.
 
     Returns:
         A DataFrame in tidy format with one row for each parameter.
@@ -35,9 +36,9 @@ def tidy_optimize(result, param_names, **kwargs):
         - `grad` (float): gradient for each parameter
         - `active_mask` (int)
     """
-    if 'param_names' not in kwargs:
-        msg = "The argument `param_names` is required for this input type."
-        raise ValueError(msg)
+    if param_names is None:
+        n = len(result.x)
+        param_names = ['p{}'.format(i) for i in range(n)]
     Params = namedtuple('Params', param_names)
     params = Params(*result.x)
     df = dict_to_tidy(params._asdict(), **kwargs)
