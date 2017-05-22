@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 def get_version():
     # http://stackoverflow.com/questions/2058802/how-can-i-get-the-version-defined-in-setup-py-setuptools-in-my-package
     from ast import parse
-    with open('pybroom.py') as f:
+    with open('pybroom/pybroom.py') as f:
         version = parse(next(filter(
             lambda line: line.startswith('__version__'), f))).body[0].value.s
     return version
@@ -52,6 +52,7 @@ setup(
                  'Programming Language :: Python',
                  'Programming Language :: Python :: 3.4',
                  'Programming Language :: Python :: 3.5',
+                 'Programming Language :: Python :: 3.6',
                  'Topic :: Scientific/Engineering',
                  'License :: OSI Approved :: MIT License'],
     keywords=('dataframe tidy-data long-form model fitting tidyverse'))
