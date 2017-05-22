@@ -37,7 +37,8 @@ def tidy_to_dict(df, key='name', value='value', keys_exclude=None,
     if keys_exclude is not None:
         keys_list = keys_list - set(keys_exclude)
     if cast_value is None:
-        cast_value = lambda x: x
+        def cast_value(x):
+            return x
     return {var: cast_value(df.loc[df[key] == var, value])
             for var in keys_list}
 
