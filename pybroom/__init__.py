@@ -1,6 +1,8 @@
 from .pybroom import tidy, glance, augment
+from .utils import tidy_to_dict, dict_to_tidy
 
 __all__ = ['tidy', 'glance', 'augment']
+__version__ = '0.3.dev0'
 
 
 def build_registries():

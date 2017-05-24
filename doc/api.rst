@@ -12,23 +12,13 @@ These are pybroom's most generic functions, accepting all the
 the supported fit result objects, as well as a list/dict of such objects.
 See also the examples at the beginning of this page and the example notebooks.
 
-.. autofunction :: glance
+.. currentmodule:: pybroom
+.. autosummary::
+   :toctree: generated/
 
-.. autofunction :: tidy
-
-.. autofunction :: augment
-
-
-Dictionary conversions
-----------------------
-
-The two functions :func:`tidy_to_dict` and :func:`dict_to_tidy` provide
-the ability to convert a tidy DataFrame to and from a python dictionary.
-
-.. autofunction :: tidy_to_dict
-
-.. autofunction :: dict_to_tidy
-
+   glance
+   tidy
+   augment
 
 Specialized functions
 ---------------------
@@ -36,12 +26,40 @@ Specialized functions
 These are the specialized (i.e. low-level) functions, each converting one
 specific object to a tidy DataFrame.
 
-.. autofunction :: glance_scipy_result
+lmfit
+*****
 
-.. autofunction :: tidy_scipy_result
+.. currentmodule:: pybroom.lmfit
+.. autosummary::
+   :toctree: generated/
 
-.. autofunction :: glance_lmfit_result
+   ~lmfit.glance_lmfit
+   ~lmfit.tidy_lmfit
+   ~lmfit.augment_lmfit
 
-.. autofunction :: tidy_lmfit_result
+scipy
+*****
 
-.. autofunction :: _augment_lmfit_modelresult
+.. currentmodule:: pybroom.scipy
+.. autosummary::
+   :toctree: generated/
+
+   ~optimize.glance_optimize
+   ~optimize.tidy_optimize
+
+
+Utility Functions
+-----------------
+
+Dictionary conversions
+**********************
+
+The two functions :func:`tidy_to_dict` and :func:`dict_to_tidy` provide
+the ability to convert a tidy DataFrame to and from a python dictionary.
+
+.. currentmodule:: pybroom.utils
+.. autosummary::
+   :toctree: generated/
+
+   tidy_to_dict
+   dict_to_tidy

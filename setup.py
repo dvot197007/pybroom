@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 def get_version():
     # http://stackoverflow.com/questions/2058802/how-can-i-get-the-version-defined-in-setup-py-setuptools-in-my-package
     from ast import parse
-    with open('pybroom/pybroom.py') as f:
+    with open('pybroom/__init__.py') as f:
         version = parse(next(filter(
             lambda line: line.startswith('__version__'), f))).body[0].value.s
     return version

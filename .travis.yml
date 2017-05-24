@@ -72,8 +72,7 @@ script:
       make test
     elif [[ "$JOB" == "DOCS" ]]; then
       pushd doc
-      make html SPHINXOPTS=-W
-      popd
+      make html SPHINXOPTS=-W && popd
     elif [[ "$JOB" == "LINT" ]]; then
       make lint
     fi
