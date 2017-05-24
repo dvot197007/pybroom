@@ -1,2 +1,4 @@
 include LICENSE.txt
 include README.md
+include versioneer.py
+include pybroom/_version.py

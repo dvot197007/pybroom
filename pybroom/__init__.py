@@ -1,8 +1,9 @@
 from .pybroom import tidy, glance, augment
-from .utils import tidy_to_dict, dict_to_tidy
+from .utils import tidy_to_dict, dict_to_tidy  # noqa 401
+from ._version import get_versions
 
 __all__ = ['tidy', 'glance', 'augment']
-__version__ = '0.3.dev0'
+__version__ = get_versions()['version']
 
 
 def build_registries():
@@ -61,3 +62,4 @@ def build_registries():
 
 build_registries()
 del build_registries
+del get_versions

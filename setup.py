@@ -1,14 +1,5 @@
 from setuptools import setup, find_packages
-#import versioneer
-
-
-def get_version():
-    # http://stackoverflow.com/questions/2058802/how-can-i-get-the-version-defined-in-setup-py-setuptools-in-my-package
-    from ast import parse
-    with open('pybroom/__init__.py') as f:
-        version = parse(next(filter(
-            lambda line: line.startswith('__version__'), f))).body[0].value.s
-    return version
+import versioneer
 
 
 long_description = r"""
@@ -33,9 +24,8 @@ See the `pybroom homepage <http://pybroom.readthedocs.io/>`__ for more info.
 
 setup(
     name='pybroom',
-    version=get_version(),
-    #version=versioneer.get_version(),
-    #cmdclass=versioneer.get_cmdclass(),
+    version=versioneer.get_version(),
+    cmdclass=versioneer.get_cmdclass(),
     author='Antonino Ingargiola',
     author_email='tritemio@gmail.com',
     url='http://pybroom.readthedocs.io/',
