@@ -85,8 +85,6 @@ from collections import OrderedDict
 from functools import singledispatch
 import pandas as pd
 
-__version__ = '0.3.dev0'
-
 
 @singledispatch
 def tidy(result, var_names='key', **kwargs):
