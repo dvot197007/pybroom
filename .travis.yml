@@ -22,6 +22,10 @@ matrix:
       env:
         - JOB: 'DOCS'
         - FULL_DEPS: true
+      addons:
+        apt:
+          packages:
+          - pandoc
     - python: 3.6
       env:
         - JOB: 'LINT'
