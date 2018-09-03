@@ -1,0 +1,23 @@
+[
+  "pybroom/tests/test_lmfit.py::TestOneModel::()::test_tidy",
+  "pybroom/tests/test_lmfit.py::TestOneModel::()::test_glance",
+  "pybroom/tests/test_lmfit.py::TestOneModel::()::test_augment",
+  "pybroom/tests/test_lmfit.py::TestModelsList::()::test_tidy",
+  "pybroom/tests/test_lmfit.py::TestModelsList::()::test_glance",
+  "pybroom/tests/test_lmfit.py::TestModelsList::()::test_augment",
+  "pybroom/tests/test_lmfit.py::TestModelsDict::()::test_tidy",
+  "pybroom/tests/test_lmfit.py::TestModelsDict::()::test_glance",
+  "pybroom/tests/test_lmfit.py::TestModelsDict::()::test_augment",
+  "pybroom/tests/test_scipy.py::TestOptimize::()::test_tidy",
+  "pybroom/tests/test_scipy.py::TestOptimize::()::test_glance",
+  "pybroom/tests/test_scipy.py::TestOptimize::()::test_augment",
+  "pybroom/tests/test_scipy.py::TestOptimizeList::()::test_tidy",
+  "pybroom/tests/test_scipy.py::TestOptimizeList::()::test_glance",
+  "pybroom/tests/test_scipy.py::TestOptimizeList::()::test_augment",
+  "pybroom/tests/test_scipy.py::TestOptimizeDict::()::test_tidy",
+  "pybroom/tests/test_scipy.py::TestOptimizeDict::()::test_glance",
+  "pybroom/tests/test_scipy.py::TestOptimizeDict::()::test_augment",
+  "pybroom/tests/test_statsmodels.py::TestOneModel::()::test_tidy",
+  "pybroom/tests/test_statsmodels.py::TestOneModel::()::test_glance",
+  "pybroom/tests/test_statsmodels.py::TestOneModel::()::test_augment"
+]
